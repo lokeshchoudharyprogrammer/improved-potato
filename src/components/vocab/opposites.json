@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_vocab_opposites",
+  "info": {
+    "displayName": "opposites",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "Word": {
+      "type": "component",
+      "repeatable": true,
+      "component": "vocab.word"
+    }
+  }
+}

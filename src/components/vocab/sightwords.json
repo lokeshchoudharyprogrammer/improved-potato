@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_vocab_sightwords",
+  "info": {
+    "displayName": "sightwords",
+    "icon": "discuss"
+  },
+  "options": {},
+  "attributes": {
+    "word": {
+      "type": "component",
+      "repeatable": true,
+      "component": "vocab.word"
+    }
+  }
+}

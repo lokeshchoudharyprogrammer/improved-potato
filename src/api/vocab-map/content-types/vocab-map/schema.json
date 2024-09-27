@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vocab_maps",
+  "info": {
+    "singularName": "vocab-map",
+    "pluralName": "vocab-maps",
+    "displayName": "VocabMap",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Class": {
+      "type": "string",
+      "required": true
+    },
+    "month": {
+      "type": "string",
+      "required": true
+    },
+    "week": {
+      "type": "string",
+      "required": true
+    },
+    "day": {
+      "type": "string"
+    },
+    "vocab": {
+      "type": "dynamiczone",
+      "components": [
+        "vocab.voca-common",
+        "vocab.synonymantonyms",
+        "vocab.singularplurals",
+        "vocab.sightwords",
+        "vocab.prefixsuffixes",
+        "vocab.opposites",
+        "vocab.compoundnouns",
+        "vocab.adverbs"
+      ]
+    }
+  }
+}

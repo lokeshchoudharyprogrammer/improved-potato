@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_vocab_voca_commons",
+  "info": {
+    "displayName": "adjectives",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Word": {
+      "type": "component",
+      "repeatable": true,
+      "component": "vocab.word"
+    }
+  }
+}

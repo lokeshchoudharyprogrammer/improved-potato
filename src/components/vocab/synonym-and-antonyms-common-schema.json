@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_vocab_synonym_and_antonyms_common_schemas",
+  "info": {
+    "displayName": "Synonym&Antonyms_Common_Schema",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "audio": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Antonyms",
+        "Synonym"
+      ]
+    }
+  }
+}

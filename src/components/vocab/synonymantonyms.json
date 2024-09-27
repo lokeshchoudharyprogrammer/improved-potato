@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_vocab_synonymantonyms",
+  "info": {
+    "displayName": "synonymantonyms",
+    "icon": "book",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "word": {
+      "type": "component",
+      "repeatable": true,
+      "component": "vocab.word",
+      "required": true
+    },
+    "type": {
+      "type": "component",
+      "repeatable": true,
+      "component": "vocab.synonym-and-antonyms-common-schema",
+      "required": true
+    }
+  }
+}

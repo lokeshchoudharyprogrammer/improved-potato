@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_vocab_words",
+  "info": {
+    "displayName": "Word",
+    "icon": "clock",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "assets": {
+      "type": "component",
+      "repeatable": true,
+      "component": "vocab.assets"
+    },
+    "Meaning": {
+      "type": "component",
+      "repeatable": true,
+      "component": "vocab.assets-and-text"
+    },
+    "Example": {
+      "type": "component",
+      "repeatable": true,
+      "component": "vocab.assets-and-text"
+    }
+  }
+}

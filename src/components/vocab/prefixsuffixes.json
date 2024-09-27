@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_vocab_prefixsuffixes",
+  "info": {
+    "displayName": "prefixsuffixes",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "topic": {
+      "type": "string",
+      "required": true
+    },
+    "word": {
+      "type": "component",
+      "repeatable": true,
+      "component": "vocab.word"
+    }
+  }
+}

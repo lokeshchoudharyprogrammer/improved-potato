@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_vocab_assets_and_texts",
+  "info": {
+    "displayName": "Assets&text",
+    "icon": "discuss"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "assets": {
+      "type": "component",
+      "repeatable": true,
+      "component": "vocab.assets"
+    }
+  }
+}

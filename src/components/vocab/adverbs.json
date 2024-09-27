@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_vocab_adverbs",
+  "info": {
+    "displayName": "adverbs",
+    "icon": "attachment"
+  },
+  "options": {},
+  "attributes": {
+    "Word": {
+      "type": "component",
+      "repeatable": true,
+      "component": "vocab.word"
+    }
+  }
+}

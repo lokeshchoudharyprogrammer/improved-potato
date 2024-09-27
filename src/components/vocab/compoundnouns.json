@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_vocab_compoundnouns",
+  "info": {
+    "displayName": "compoundnouns",
+    "icon": "calendar"
+  },
+  "options": {},
+  "attributes": {
+    "Topic": {
+      "type": "string",
+      "required": true
+    },
+    "word": {
+      "type": "component",
+      "repeatable": true,
+      "component": "vocab.word",
+      "required": true
+    }
+  }
+}

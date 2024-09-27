@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_vocab_singularplurals",
+  "info": {
+    "displayName": "singularplurals",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "words": {
+      "type": "component",
+      "repeatable": true,
+      "component": "vocab.word"
+    }
+  }
+}

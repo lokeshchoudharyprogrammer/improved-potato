@@ -675,6 +675,49 @@ export interface ApiRcaMapRcaMap extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiVocabMapVocabMap extends Struct.CollectionTypeSchema {
+  collectionName: 'vocab_maps';
+  info: {
+    singularName: 'vocab-map';
+    pluralName: 'vocab-maps';
+    displayName: 'VocabMap';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Class: Schema.Attribute.String & Schema.Attribute.Required;
+    month: Schema.Attribute.String & Schema.Attribute.Required;
+    week: Schema.Attribute.String & Schema.Attribute.Required;
+    day: Schema.Attribute.String;
+    vocab: Schema.Attribute.DynamicZone<
+      [
+        'vocab.voca-common',
+        'vocab.synonymantonyms',
+        'vocab.singularplurals',
+        'vocab.sightwords',
+        'vocab.prefixsuffixes',
+        'vocab.opposites',
+        'vocab.compoundnouns',
+        'vocab.adverbs',
+      ]
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::vocab-map.vocab-map'
+    >;
+  };
+}
+
 export interface AdminPermission extends Struct.CollectionTypeSchema {
   collectionName: 'admin_permissions';
   info: {
@@ -1054,6 +1097,7 @@ declare module '@strapi/strapi' {
       'api::question-builder.question-builder': ApiQuestionBuilderQuestionBuilder;
       'api::rca-assessment.rca-assessment': ApiRcaAssessmentRcaAssessment;
       'api::rca-map.rca-map': ApiRcaMapRcaMap;
+      'api::vocab-map.vocab-map': ApiVocabMapVocabMap;
       'admin::permission': AdminPermission;
       'admin::user': AdminUser;
       'admin::role': AdminRole;
