@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_block_subjectives",
+  "info": {
+    "displayName": "Subjective"
+  },
+  "options": {},
+  "attributes": {
+    "Question_Type": {
+      "type": "enumeration",
+      "enum": [
+        "VSA",
+        "SA",
+        "LA"
+      ],
+      "required": true
+    },
+    "Question": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

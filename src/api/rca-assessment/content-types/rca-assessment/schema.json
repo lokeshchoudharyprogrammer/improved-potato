@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rca_assessments",
+  "info": {
+    "singularName": "rca-assessment",
+    "pluralName": "rca-assessments",
+    "displayName": "RCA_Assessment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "regex": "[A-Z]",
+      "required": true
+    },
+    "parts": {
+      "type": "dynamiczone",
+      "components": [
+        "rca.part-b",
+        "rca.part-a"
+      ]
+    }
+  }
+}

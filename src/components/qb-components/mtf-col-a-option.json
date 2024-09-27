@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_qb_components_mtf_col_a_options",
+  "info": {
+    "displayName": "mtf_colA_option",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "left_option": {
+      "type": "string"
+    },
+    "right_option": {
+      "type": "component",
+      "repeatable": true,
+      "component": "block.option"
+    }
+  }
+}

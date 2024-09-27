@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_block_mtfs",
+  "info": {
+    "displayName": "MTF"
+  },
+  "options": {},
+  "attributes": {
+    "options": {
+      "type": "component",
+      "repeatable": true,
+      "component": "qb-components.mtf-col-a-option"
+    }
+  }
+}

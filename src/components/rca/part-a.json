@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_rca_part_as",
+  "info": {
+    "displayName": "Part A",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Instruction": {
+      "type": "string",
+      "required": true,
+      "default": "Read and record the passage"
+    },
+    "passage": {
+      "type": "richtext",
+      "required": true
+    },
+    "model_reading": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

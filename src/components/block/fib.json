@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_block_fibs",
+  "info": {
+    "displayName": "FIB"
+  },
+  "options": {},
+  "attributes": {
+    "Question": {
+      "type": "richtext",
+      "required": true
+    },
+    "Answer": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

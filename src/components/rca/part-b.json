@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_rca_part_bs",
+  "info": {
+    "displayName": "Part B",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Instruction": {
+      "type": "string",
+      "default": "Read, comprehend the passage and choose the right answer for the following questions"
+    },
+    "passage": {
+      "type": "richtext",
+      "required": true
+    },
+    "mcq": {
+      "type": "component",
+      "repeatable": true,
+      "component": "block.mcq-question"
+    }
+  }
+}

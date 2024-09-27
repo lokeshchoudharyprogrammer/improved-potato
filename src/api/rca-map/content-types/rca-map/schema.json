@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rca_maps",
+  "info": {
+    "singularName": "rca-map",
+    "pluralName": "rca-maps",
+    "displayName": "rca_map",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "class": {
+      "min": 0,
+      "max": 10,
+      "type": "integer"
+    },
+    "bucket": {
+      "type": "enumeration",
+      "enum": [
+        "E",
+        "T",
+        "P",
+        "none"
+      ]
+    },
+    "assessment_type": {
+      "type": "enumeration",
+      "enum": [
+        "Baseline",
+        "MonthEnd",
+        "TermEnd",
+        "Practice"
+      ],
+      "required": true
+    },
+    "month": {
+      "type": "integer"
+    },
+    "week": {
+      "type": "integer",
+      "min": 1,
+      "max": 4
+    },
+    "rca_assessments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::rca-assessment.rca-assessment"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "question_builders",
+  "info": {
+    "singularName": "question-builder",
+    "pluralName": "question-builders",
+    "displayName": "Question_Builder",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Question_Id": {
+      "type": "integer",
+      "required": true,
+      "unique": true
+    },
+    "Subject": {
+      "type": "string",
+      "required": true
+    },
+    "Term": {
+      "type": "integer",
+      "min": 1,
+      "max": 3,
+      "required": true
+    },
+    "Class": {
+      "type": "integer",
+      "required": true,
+      "min": 1,
+      "max": 10
+    },
+    "Curriculum_Goal": {
+      "type": "string",
+      "required": true
+    },
+    "Marks": {
+      "type": "integer",
+      "required": true,
+      "min": 1,
+      "max": 10
+    },
+    "Question_Type": {
+      "type": "dynamiczone",
+      "components": [
+        "block.subjective",
+        "block.mtf",
+        "block.media-input",
+        "block.mcq-question",
+        "block.fib",
+        "block.audio-question"
+      ],
+      "required": true
+    }
+  }
+}

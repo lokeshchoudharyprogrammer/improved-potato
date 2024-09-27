@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_block_mcq_questions",
+  "info": {
+    "displayName": "MCQ",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "mcq_question_text": {
+      "type": "blocks",
+      "required": true
+    },
+    "option1": {
+      "type": "component",
+      "repeatable": false,
+      "component": "block.option",
+      "required": true
+    },
+    "option2": {
+      "type": "component",
+      "repeatable": false,
+      "component": "block.option",
+      "required": true
+    },
+    "option3": {
+      "type": "component",
+      "repeatable": false,
+      "component": "block.option",
+      "required": true
+    },
+    "option4": {
+      "type": "component",
+      "repeatable": false,
+      "component": "block.option",
+      "required": true
+    },
+    "KPI_Tag": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

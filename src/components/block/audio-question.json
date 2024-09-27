@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_block_audio_questions",
+  "info": {
+    "displayName": "Audio_Question"
+  },
+  "options": {},
+  "attributes": {
+    "audio_question": {
+      "type": "string"
+    }
+  }
+}

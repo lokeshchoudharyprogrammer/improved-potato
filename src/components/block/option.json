@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_block_options",
+  "info": {
+    "displayName": "Option",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "option_text": {
+      "type": "string",
+      "required": true
+    },
+    "isAnswer": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    },
+    "media_option": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
