@@ -90,10 +90,11 @@ export interface VocabPrefixsuffixes extends Struct.ComponentSchema {
   info: {
     displayName: 'prefixsuffixes';
     icon: 'apps';
+    description: '';
   };
   attributes: {
     topic: Schema.Attribute.String & Schema.Attribute.Required;
-    word: Schema.Attribute.Component<'vocab.word', true>;
+    word: Schema.Attribute.Component<'vocab.word', false>;
   };
 }
 
@@ -102,9 +103,11 @@ export interface VocabOpposites extends Struct.ComponentSchema {
   info: {
     displayName: 'opposites';
     icon: 'book';
+    description: '';
   };
   attributes: {
-    Word: Schema.Attribute.Component<'vocab.word', true>;
+    Positives: Schema.Attribute.Component<'vocab.word', false>;
+    Negative: Schema.Attribute.Component<'vocab.word', false>;
   };
 }
 
@@ -186,6 +189,18 @@ export interface RcaPartA extends Struct.ComponentSchema {
     model_reading: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
+  };
+}
+
+export interface QbComponentsMtfColAOption extends Struct.ComponentSchema {
+  collectionName: 'components_qb_components_mtf_col_a_options';
+  info: {
+    displayName: 'mtf_colA_option';
+    description: '';
+  };
+  attributes: {
+    left_option: Schema.Attribute.String;
+    right_option: Schema.Attribute.Component<'block.option', true>;
   };
 }
 
@@ -286,18 +301,6 @@ export interface BlockAudioQuestion extends Struct.ComponentSchema {
   };
 }
 
-export interface QbComponentsMtfColAOption extends Struct.ComponentSchema {
-  collectionName: 'components_qb_components_mtf_col_a_options';
-  info: {
-    displayName: 'mtf_colA_option';
-    description: '';
-  };
-  attributes: {
-    left_option: Schema.Attribute.String;
-    right_option: Schema.Attribute.Component<'block.option', true>;
-  };
-}
-
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -315,6 +318,7 @@ declare module '@strapi/strapi' {
       'vocab.adverbs': VocabAdverbs;
       'rca.part-b': RcaPartB;
       'rca.part-a': RcaPartA;
+      'qb-components.mtf-col-a-option': QbComponentsMtfColAOption;
       'block.subjective': BlockSubjective;
       'block.option': BlockOption;
       'block.mtf': BlockMtf;
@@ -322,7 +326,6 @@ declare module '@strapi/strapi' {
       'block.mcq-question': BlockMcqQuestion;
       'block.fib': BlockFib;
       'block.audio-question': BlockAudioQuestion;
-      'qb-components.mtf-col-a-option': QbComponentsMtfColAOption;
     }
   }
 }

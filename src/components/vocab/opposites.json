@@ -2,13 +2,19 @@
   "collectionName": "components_vocab_opposites",
   "info": {
     "displayName": "opposites",
-    "icon": "book"
+    "icon": "book",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "Word": {
+    "Positives": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
+      "component": "vocab.word"
+    },
+    "Negative": {
+      "type": "component",
+      "repeatable": false,
       "component": "vocab.word"
     }
   }
