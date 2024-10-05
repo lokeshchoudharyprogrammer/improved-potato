@@ -6,10 +6,6 @@
   },
   "options": {},
   "attributes": {
-    "mcq_question_text": {
-      "type": "blocks",
-      "required": true
-    },
     "option1": {
       "type": "component",
       "repeatable": false,
@@ -36,6 +32,10 @@
     },
     "KPI_Tag": {
       "type": "string",
+      "required": true
+    },
+    "mcq_question": {
+      "type": "richtext",
       "required": true
     }
   }
