@@ -50,11 +50,12 @@ export interface PluginUploadFile extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'plugin::upload.file'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -100,11 +101,12 @@ export interface PluginUploadFolder extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'plugin::upload.folder'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -145,11 +147,12 @@ export interface PluginI18NLocale extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'plugin::i18n.locale'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -192,11 +195,12 @@ export interface PluginContentReleasesRelease
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'plugin::content-releases.release'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -224,7 +228,7 @@ export interface PluginContentReleasesReleaseAction
       Schema.Attribute.Required;
     contentType: Schema.Attribute.String & Schema.Attribute.Required;
     entryDocumentId: Schema.Attribute.String;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     release: Schema.Attribute.Relation<
       'manyToOne',
       'plugin::content-releases.release'
@@ -240,7 +244,8 @@ export interface PluginContentReleasesReleaseAction
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'plugin::content-releases.release-action'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -283,11 +288,12 @@ export interface PluginReviewWorkflowsWorkflow
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'plugin::review-workflows.workflow'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -328,11 +334,12 @@ export interface PluginReviewWorkflowsWorkflowStage
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'plugin::review-workflows.workflow-stage'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -370,11 +377,12 @@ export interface PluginUsersPermissionsPermission
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'plugin::users-permissions.permission'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -422,11 +430,12 @@ export interface PluginUsersPermissionsRole
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'plugin::users-permissions.role'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -477,11 +486,12 @@ export interface PluginUsersPermissionsUser
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'plugin::users-permissions.user'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -516,8 +526,9 @@ export interface ApiPartPart extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::part.part'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::part.part'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -584,11 +595,12 @@ export interface ApiQuestionBuilderQuestionBuilder
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::question-builder.question-builder'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -614,11 +626,12 @@ export interface ApiRcaAssessmentRcaAssessment
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::rca-assessment.rca-assessment'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -667,11 +680,12 @@ export interface ApiRcaMapRcaMap extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::rca-map.rca-map'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -710,11 +724,12 @@ export interface ApiVocabMapVocabMap extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::vocab-map.vocab-map'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -759,8 +774,9 @@ export interface AdminPermission extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'admin::permission'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'admin::permission'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -824,8 +840,9 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'admin::user'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'admin::user'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -872,8 +889,9 @@ export interface AdminRole extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'admin::role'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'admin::role'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -931,8 +949,9 @@ export interface AdminApiToken extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'admin::api-token'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'admin::api-token'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -970,11 +989,12 @@ export interface AdminApiTokenPermission extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'admin::api-token-permission'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1029,11 +1049,12 @@ export interface AdminTransferToken extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'admin::transfer-token'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1072,11 +1093,12 @@ export interface AdminTransferTokenPermission
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'admin::transfer-token-permission'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 

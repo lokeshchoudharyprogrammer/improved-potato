@@ -161,18 +161,6 @@ export interface VocabAdverbs extends Struct.ComponentSchema {
   };
 }
 
-export interface QbComponentsMtfColAOption extends Struct.ComponentSchema {
-  collectionName: 'components_qb_components_mtf_col_a_options';
-  info: {
-    displayName: 'mtf_colA_option';
-    description: '';
-  };
-  attributes: {
-    left_option: Schema.Attribute.String;
-    right_option: Schema.Attribute.Component<'block.option', true>;
-  };
-}
-
 export interface RcaPartB extends Struct.ComponentSchema {
   collectionName: 'components_rca_part_bs';
   info: {
@@ -301,6 +289,18 @@ export interface BlockAudioQuestion extends Struct.ComponentSchema {
   };
 }
 
+export interface QbComponentsMtfColAOption extends Struct.ComponentSchema {
+  collectionName: 'components_qb_components_mtf_col_a_options';
+  info: {
+    displayName: 'mtf_colA_option';
+    description: '';
+  };
+  attributes: {
+    left_option: Schema.Attribute.String;
+    right_option: Schema.Attribute.Component<'block.option', true>;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -316,7 +316,6 @@ declare module '@strapi/strapi' {
       'vocab.assets': VocabAssets;
       'vocab.assets-and-text': VocabAssetsAndText;
       'vocab.adverbs': VocabAdverbs;
-      'qb-components.mtf-col-a-option': QbComponentsMtfColAOption;
       'rca.part-b': RcaPartB;
       'rca.part-a': RcaPartA;
       'block.subjective': BlockSubjective;
@@ -326,6 +325,7 @@ declare module '@strapi/strapi' {
       'block.mcq-question': BlockMcqQuestion;
       'block.fib': BlockFib;
       'block.audio-question': BlockAudioQuestion;
+      'qb-components.mtf-col-a-option': QbComponentsMtfColAOption;
     }
   }
 }
