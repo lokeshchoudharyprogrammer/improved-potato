@@ -1,50 +1,35 @@
 import path from 'path';
 
-export default ({ env }) => {
-  const client = env('DATABASE_CLIENT', 'postgres');
+export default () => {
+  const client = 'postgres'; // Change this to 'mysql' or 'sqlite' if needed
 
   const connections = {
     mysql: {
       connection: {
-        host: env('DATABASE_HOST', 'localhost'),
-        port: env.int('DATABASE_PORT', 3306),
-        database: env('DATABASE_NAME', 'strapi'),
-        user: env('DATABASE_USERNAME', 'strapi'),
-        password: env('DATABASE_PASSWORD', 'strapi'),
-        ssl: env.bool('DATABASE_SSL', false) && {
-          key: env('DATABASE_SSL_KEY', undefined),
-          cert: env('DATABASE_SSL_CERT', undefined),
-          ca: env('DATABASE_SSL_CA', undefined),
-          capath: env('DATABASE_SSL_CAPATH', undefined),
-          cipher: env('DATABASE_SSL_CIPHER', undefined),
-          rejectUnauthorized: env.bool('DATABASE_SSL_REJECT_UNAUTHORIZED', true),
-        },
+        host: 'localhost', // Change to your MySQL host
+        port: 3306, // Default MySQL port
+        database: 'strapi', // Your database name
+        user: 'strapi', // Your MySQL username
+        password: 'vHLuZfKRWtAa0Kyd', // Your MySQL password
+        ssl: false,
       },
-      pool: { min: env.int('DATABASE_POOL_MIN', 2), max: env.int('DATABASE_POOL_MAX', 10) },
+      pool: { min: 2, max: 10 },
     },
     postgres: {
       connection: {
-        connectionString: env('DATABASE_URL'),
-        host: env('DATABASE_HOST'),
-        port: env.int('DATABASE_PORT'),
-        database: env('DATABASE_NAME'),
-        user: env('DATABASE_USERNAME'),
-        password: env('DATABASE_PASSWORD'),
-        ssl: env.bool('DATABASE_SSL', true) && {
-          key: env('DATABASE_SSL_KEY', undefined),
-          cert: env('DATABASE_SSL_CERT', undefined),
-          ca: env('DATABASE_SSL_CA', undefined),
-          capath: env('DATABASE_SSL_CAPATH', undefined),
-          cipher: env('DATABASE_SSL_CIPHER', undefined),
-          rejectUnauthorized: false,
-        },
-        schema: env('DATABASE_SCHEMA', 'public'),
+        host: 'aws-0-ap-south-1.pooler.supabase.com', // Your PostgreSQL host
+        port: 6543, // Your PostgreSQL port
+        database: 'postgres', // Your database name
+        user: 'postgres.zragvlgzbensfgplfuey', // Your PostgreSQL username
+        password: 'vHLuZfKRWtAa0Kyd', // Your PostgreSQL password
+        ssl: false, // Set to true if SSL is required
+        schema: 'public', // Adjust if needed
       },
-      pool: { min: env.int('DATABASE_POOL_MIN', 2), max: env.int('DATABASE_POOL_MAX', 10) },
+      pool: { min: 2, max: 10 },
     },
     sqlite: {
       connection: {
-        filename: path.join(__dirname, '..', '..', env('DATABASE_FILENAME', '.tmp/data.db')),
+        filename: path.join(__dirname, '..', '..', '.tmp/data.db'), // SQLite file path
       },
       useNullAsDefault: true,
     },
@@ -54,7 +39,7 @@ export default ({ env }) => {
     connection: {
       client,
       ...connections[client],
-      acquireConnectionTimeout: env.int('DATABASE_CONNECTION_TIMEOUT', 60000),
+      acquireConnectionTimeout: 60000, // Adjust timeout if needed
     },
   };
 };
